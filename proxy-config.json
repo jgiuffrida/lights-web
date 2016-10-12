@@ -1,0 +1,6 @@
+{
+  "/outlets/1": {
+    "target": "http://192.168.2.14:3000/outlets",
+    "secure": false
+  }
+}

@@ -4,17 +4,26 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { DebugComponent } from './debug.component';
+import { LightsComponent } from './lights/lights.component';
+import { OutletsService } from './outlets.service';
+import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DebugComponent,
+    LightsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [
+    OutletsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
