@@ -1,0 +1,10 @@
+<div class="debug">
+  <md-button
+    class="" 
+    ng-repeat="outlet in vm.data.outlets track by $index"
+    ng-class="{ on: outlet, off: !outlet }"
+    ng-click="vm.toggleOutlet($index,!outlet)"
+  >
+    Oulet {{ $index+1 }}
+  </md-button>
+</div>

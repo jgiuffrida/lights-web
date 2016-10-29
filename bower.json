@@ -1,0 +1,48 @@
+{
+  "name": "trout",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular-animate": "~1.4.2",
+    "angular-cookies": "~1.4.2",
+    "angular-touch": "~1.4.2",
+    "angular-sanitize": "~1.4.2",
+    "angular-messages": "~1.4.2",
+    "angular-aria": "~1.4.2",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "malarkey": "yuanqing/malarkey#~1.3.1",
+    "angular-toastr": "~1.5.0",
+    "moment": "~2.10.6",
+    "animate.css": "~3.4.0",
+    "angular": "~1.4.2",
+    "socket.io-client": "~1.3.7",
+    "lodash": "~3.10.1",
+    "angular-route": "~1.4.8",
+    "angular-material": "~1.0.1",
+    "angular-socket-io": "~0.7.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.2"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/fonts/glyphicons-halflings-regular.eot",
+        "dist/fonts/glyphicons-halflings-regular.svg",
+        "dist/fonts/glyphicons-halflings-regular.ttf",
+        "dist/fonts/glyphicons-halflings-regular.woff",
+        "dist/fonts/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "socket.io-client": {
+      "main": [
+        "socket.io.js"
+      ]
+    }
+  },
+  "resolutions": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.2"
+  }
+}

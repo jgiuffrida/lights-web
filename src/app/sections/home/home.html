@@ -1,0 +1,22 @@
+<div class="home">
+  <div class="message">
+    <div>
+      <input type="text" ng-model="vm.currentMessage" />
+    </div>
+    <md-button class="md-accent md-raised"
+            ng-click="vm.sendMessage(vm.currentMessage)">
+      WRITE IT
+    </md-button>
+  </div>
+  <div class="messages">
+    <ul>
+      <li ng-repeat="message in vm.data.messages track by $index"
+          ng-class="{ 'current': $index ==0 }">
+        {{message}} <span ng-show="$index == 0"> - {{ vm.data.messageProgress }}%</span>
+      </li>
+    </ul>
+    <div ng-hide="vm.data.messages.length">
+      No messages
+    </div>
+  </div>
+</div>
