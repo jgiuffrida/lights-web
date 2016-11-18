@@ -19,4 +19,13 @@
       No messages
     </div>
   </div>
+
+  <div class="premades">
+    <md-button class="md-accent md-raised"
+      ng-repeat="(key, premade) in vm.data.premades"
+      ng-click="vm.triggerPremade(key)"
+    >
+    {{ premade.label }}
+    </md-button>
+  </div>
 </div>

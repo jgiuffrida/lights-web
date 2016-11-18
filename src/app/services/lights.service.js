@@ -8,7 +8,8 @@ function LightsService(LightSocket, $q, $http) {
     this.data = {
         outlets: [],
         messages: [],
-        messageProgress: 0
+        messageProgress: 0,
+        premades: []
     };
 
     this.listen();
@@ -21,6 +22,10 @@ _.assign(LightsService.prototype, {
         this.socket.on('lights:error', this.error.bind(this));
         this.socket.on('lights:message:status', this.updateMessages.bind(this));
         this.socket.on('lights:message:progress', this.updateProgress.bind(this));
+        this.socket.on('lights:premades:status', this.updatePremades.bind(this));
+    },
+    updatePremades: function(premades) {
+        this.data.premades = premades;
     },
     updateOutlets: function(status) {
         this.data.outlets = status;
@@ -41,6 +46,9 @@ _.assign(LightsService.prototype, {
     },
     addMessage: function(msg) {
         this.socket.emit('lights:add:message', { message: msg });
+    },
+    triggerPremade: function(premade) {
+        this.socket.emit('lights:premades:play', { id: premade });
     },
     setOutlet: function(outlet, status) {
         this.socket.emit('lights:set:outlet', {id: outlet, status: status});
